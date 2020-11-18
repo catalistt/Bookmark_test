@@ -1,0 +1,3 @@
+var tableBody = document.querySelector("tbody")
+$('#form-bm')[0].reset();
+tableBody.insertAdjacentHTML("beforebegin", "<%= escape_javascript render(partial: 'bookmark_detail', locals: { bookmark: @bookmark }) %>");

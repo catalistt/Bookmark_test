@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
-  has_many :subcategories, :class_name => "Category", :foreign_key => "parent_id", :dependent => :destroy, inverse_of: :parent_category
-  belongs_to :parent_category, :class_name => "Category", optional: true, inverse_of: :subcategories
+  has_many :subcategories, :class_name => "Category", :foreign_key => "parent_id", :dependent => :destroy
+  belongs_to :parent_category, :class_name => "Category", optional: true
   has_many  :bookmarks
 
   before_save do

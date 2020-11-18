@@ -1,31 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
 
-<table class ="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Visibility</th>
-      <th>Parent</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<container>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <h2>Categories detail</h2>
+      <table class ="table table-bordered table-hover table-sm bg-light">
+        <thead class="bg-info">
+          <tr>
+            <th>Name</th>
+            <th>Visibility</th>
+            <th>Parent category</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <% if category.visibility == true %> 
-          <td><%= category.name %></td>
-          <td><%= category.visibility %></td>
-          <td><%= category.parent_id %></td>
-          <td><%= link_to 'Show', category %></td>
-          <td><%= link_to 'Edit', edit_category_path(category) %></td>
-          <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @categories.each do |category| %>
+            <tr>
+              <% if category.visibility == true %> 
+                <td><%= category.name %></td>
+                <td><%= category.visibility %></td>
+                <td><%= category.parent_id %></td>
+                <td><%= link_to 'Show', category %></td>
+                <td><%= link_to 'Edit', edit_category_path(category) %></td>
+                <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</container>
 
 <br>

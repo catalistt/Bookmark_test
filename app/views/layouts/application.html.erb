@@ -10,8 +10,14 @@
   </head>
 
   <body>
+  <%= render 'shared/navbar' %>
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-<%= type %>">
+      <%= msg %>
+    </div>
+  <% end %>
     <%= yield %>
     
   </body>
-  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </html>

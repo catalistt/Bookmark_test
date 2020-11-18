@@ -14,3 +14,9 @@
  *= require_self
  */
  @import "bootstrap";
+ body {
+  background-color: azure;
+  background-image: url("background.jpg");
+  background-size: cover;
+  color: black;
+}
