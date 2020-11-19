@@ -26,7 +26,7 @@
               <td><%= type.bookmarks.count %></td>
               <td><%= link_to 'Show', type %></td>
               <td><%= link_to 'Edit', edit_type_path(type) %></td>
-              <td><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Destroy', type, method: :delete, data: {confirm: 'Are you sure?', commit: 'Delete it', title: 'Deleting a type', cancel: 'Keep it'} %></td>
             </tr>
           <% end %>
         </tbody>

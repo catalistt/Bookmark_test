@@ -39,7 +39,7 @@
           </div>
 
           <div class="actions save-bookmark">
-          <%= form.submit 'Crear Bookmark', data: {confirm: 'Are you sure?'}, class: "btn btn-primary" %>
+          <%= form.submit 'Crear Bookmark', data: {confirm: 'Are you sure?', commit: 'Sure!', title: 'Adding a new bookmark', cancel: 'Cancel'}, class: "btn btn-primary add-bookmark", id: "alerta" %>
           </div>
         <% end %>
       </div>

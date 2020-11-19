@@ -14,8 +14,10 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require data-confirm-modal
 //= require chartkick
 //= require highcharts
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
